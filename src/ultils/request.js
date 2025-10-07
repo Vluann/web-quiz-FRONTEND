@@ -1,4 +1,4 @@
-const API_DOMAIN_PATH = "http://localhost:3002";
+const API_DOMAIN_PATH = "https://web-quiz-backend4.onrender.com";
 
 export const get = async (path) => {
   const response = await fetch(API_DOMAIN_PATH + path);
