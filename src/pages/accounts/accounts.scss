@@ -1,0 +1,363 @@
+.accounts {
+  margin-top: 50px;
+
+  .row {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    gap: 10px;
+  }
+
+  &-avatar {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 48px;
+    color: white;
+  }
+
+  &-fullname {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+
+  &-email {
+    color: #666;
+    font-size: 20px;
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding: 20px 30px;
+
+    &__item {
+      .span1 {
+        display: block;
+        margin-right: 30px;
+        margin-left: 30px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .span2 {
+        font-size: 16px;
+        color: #999;
+        text-transform: uppercase;
+        margin-top: 10px;
+        margin-right: 30px;
+        margin-left: 30px;
+      }
+    }
+  }
+
+  &-setting {
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+      margin: 0 -10px;
+      align-items: stretch;
+      background: none;
+      box-shadow: none;
+    }
+
+    .col-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 10px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    &-inerleft,
+    &-inerright {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      &__border {
+        height: 2px;
+        background: #eee;
+        margin: 10px 0 20px;
+      }
+
+      &__fullname {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        text-align: left;
+
+        label {
+          font-size: 14px;
+          font-weight: 500;
+          margin-bottom: 5px;
+        }
+
+        input {
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          transition: border-color 0.3s;
+
+          &:focus {
+            border-color: #667eea;
+            outline: none;
+          }
+        }
+      }
+
+      button {
+        margin-top: auto;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+
+    .row {
+      margin-bottom: 15px;
+    }
+
+    &-avatar {
+      width: 80px;
+      height: 80px;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    &-fullname {
+      font-size: 22px;
+    }
+
+    &-email {
+      font-size: 16px;
+    }
+
+    &-menu {
+      padding: 15px 20px;
+      flex-direction: column;
+      gap: 15px;
+
+      &__item {
+        .span1 {
+          font-size: 20px;
+          margin: 0 20px;
+        }
+
+        .span2 {
+          font-size: 12px;
+          margin: 0 20px;
+        }
+      }
+    }
+
+    &-setting .row {
+      flex-wrap: wrap;
+    }
+
+    &-setting .col-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &-inerleft,
+    &-inerright {
+      h2 {
+        font-size: 18px;
+      }
+
+      &__fullname {
+        label {
+          font-size: 12px;
+        }
+
+        input {
+          font-size: 12px;
+          padding: 8px;
+        }
+      }
+
+      button {
+        font-size: 12px;
+        padding: 8px 16px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 20px;
+
+    &-avatar {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+    }
+
+    &-fullname {
+      font-size: 18px;
+    }
+
+    &-email {
+      font-size: 14px;
+    }
+
+    &-menu {
+      padding: 10px 15px;
+
+      &__item {
+        .span1 {
+          font-size: 16px;
+          margin: 0 15px;
+        }
+
+        .span2 {
+          font-size: 10px;
+          margin: 0 15px;
+        }
+      }
+    }
+
+    &-inerleft,
+    &-inerright {
+      padding: 15px;
+
+      h2 {
+        font-size: 16px;
+      }
+
+      &__fullname {
+        label {
+          font-size: 10px;
+        }
+
+        input {
+          font-size: 10px;
+          padding: 6px;
+        }
+      }
+
+      button {
+        font-size: 10px;
+        padding: 6px 12px;
+      }
+    }
+  }
+}
+
+.accounts-inerleft {
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  label {
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-weight: 500;
+  }
+  h2 {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  &__fullname {
+    text-align: left;
+  }
+
+  button {
+    text-align: left;
+    display: block;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    color: #fff;
+    font-weight: 500;
+  }
+}
+
+.accounts-inerright {
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  label {
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-weight: 500;
+  }
+  h2 {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  button {
+    text-align: left;
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 20px;
+    background: #2ecc71;
+    color: white;
+  }
+}

@@ -1,0 +1,180 @@
+.ranking {
+  margin-top: 20px;
+
+  .row {
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+  }
+
+  &-detail {
+    padding: 20px 0px 0px;
+
+    &__item {
+      display: flex;
+      flex-wrap: wrap; 
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      height: auto;
+    }
+  }
+
+  &-select {
+    select {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      width: 300px; 
+      max-width: 100%;
+      margin-left: 10px;
+    }
+  }
+
+  &-results {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  &-users {
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    gap: 20px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto; 
+
+    &__menu {
+      display: flex;
+      flex-wrap: wrap; 
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    &__rankItem {
+      text-align: center;
+      min-width: 150px; 
+      &-rank {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+
+      &-name {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      &-avg {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+
+    thead {
+      background: #f5f6fa;
+      th {
+        padding: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #333;
+        border-bottom: 2px solid #ddd;
+      }
+    }
+
+    tbody {
+      tr {
+        transition: background 0.2s;
+        &:hover {
+          background: #f9f9f9;
+        }
+      }
+
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        color: #444;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      td, th {
+        padding: 8px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-detail {
+      &__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+    &-users {
+      &__menu {
+        flex-direction: column;
+      }
+      &__rankItem {
+        min-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &-select select {
+      width: 100%;
+      margin-left: 0;
+    }
+    &-results {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+    &-users__rankItem {
+      &-rank {
+        font-size: 30px;
+      }
+      &-name {
+        font-size: 14px;
+      }
+      &-avg {
+        font-size: 16px;
+      }
+    }
+    table {
+      td, th {
+        font-size: 12px;
+        padding: 6px 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.correct {
+  &-true {
+    background: green !important;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &-false {
+    background: red !important;
+    color: #fff;
+    font-weight: 700;
+  }
+}
