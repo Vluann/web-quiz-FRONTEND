@@ -1,4 +1,4 @@
-const API_DOMAIN_PATH = "https://web-quiz-backend-4.vercel.app/";
+const API_DOMAIN_PATH = "https://web-quiz-backend4-production.up.railway.app";
 
 export const get = async (path) => {
   const response = await fetch(API_DOMAIN_PATH + path);
